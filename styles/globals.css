@@ -11,6 +11,33 @@ a {
   text-decoration: none;
 }
 
+p{
+  color: green;
+   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+}
+h1{
+  color: green;
+   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
+.buttonDiv{
+  display: inline-block;
+  padding:20px;
+}
+
+.imageCss{
+  width:500px;
+  height: 550px;
+  border-radius: 20px;
+  position: relative;
+  left: 50%;
+  margin-left: -15.5em;
+  flex-grow: 0;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  }
+  .border-radius{
+    border-radius: 20px;
+  }
