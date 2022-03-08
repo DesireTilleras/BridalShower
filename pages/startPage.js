@@ -4,7 +4,7 @@ import Button from "../components/button.js";
 const startPage = () => {
 
   let propsRegister = {
-    text: 'Anmälen',
+    text: 'Anmälan',
     path: '/register',
   };
   let propsSchema = {
