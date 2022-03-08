@@ -1,11 +1,10 @@
 
-import {usersRepo} from '../helpers/users-repo'
+import {registeredRepo} from '../../helpers/api/registered-repo'
 
 
 export default function handler(req, res) {
 
-    debugger
-  // Get data submitted in request's body.
+   // Get data submitted in request's body.
   const {...user} = req.body;
 
   // Optional logging to see the responses
@@ -17,17 +16,15 @@ export default function handler(req, res) {
   if (!user.username) {
     // Sends a HTTP bad request error code
 
-    if(usersRepo.find(x=> x.username === user.username))
-    throw `User with username already exists ${user.username}`
-
-
     return res.status(400).json({ data: "First or last name not found" });
   }
+  // if(usersRepo.find(x=> x.username === user.username))
+  // throw `User with username already exists ${user.username}`
 
-  usersRepo.create(user)
 
-  debugger
-  // Found the name.
+  registeredRepo.create(user)
+
+    // Found the name.
   // Sends a HTTP success code
   res.status(200).json({ username: `${user.username}` });
 }
