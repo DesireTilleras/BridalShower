@@ -1,16 +1,22 @@
+import Link from "next/link";
 import Form from "../components/form.js";
+import StyledButton from '../components/styled/styledButton'
 
 function register({ names }) {
   console.log(names.Names);
   return (
     <div>
-      <Form />
-      <p>Anmälda:</p>
-      <ul>
-        {names.Names.map((name) => (
-          <li>{name.username}</li>
-        ))}
-      </ul>
+        <Link href="/"><StyledButton>Tillbaks till startsidan</StyledButton></Link>
+      <div style={{ textAlign: "center" }}>
+        <h1>Anmäl dig här!</h1>
+        <Form />
+        <h1>Anmälda:</h1>
+        <ul>
+          {names.Names.map((name) => (
+            <p>{name.id} {'. '} {"| Name :"} {name.username} {"| Email :"} {name.email}</p>           
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
@@ -30,8 +36,7 @@ export async function getServerSideProps(context) {
       },
     };
   }
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+
   return {
     props: { names },
   };

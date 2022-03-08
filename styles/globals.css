@@ -19,6 +19,13 @@ h1{
   color: green;
    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
 }
+label{
+  margin-right: 10px;
+}
+
+input{
+  margin-right: 10px;
+}
 
 * {
   box-sizing: border-box;

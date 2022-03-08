@@ -1,4 +1,9 @@
+import { useRouter } from 'next/router'
+import StyledForm from '../components/styled/styledForm'
+import StyledButton from './styled/styledButton';
+
 export default function PageWithJSbasedForm() {
+  const router = useRouter()
   // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
@@ -7,6 +12,7 @@ export default function PageWithJSbasedForm() {
         // Get data from the form.
     const data = {
       username: event.target.username.value,
+      email: event.target.email.value
     };
 
     // Send the data to the server in JSON format.
@@ -33,15 +39,16 @@ export default function PageWithJSbasedForm() {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json();
-    alert(`Is this your full name: ${result.username}`);
   };
   return (
+ 
     // We pass the event to the handleSubmit() function on submit.
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Name</label>
-      <input type="text" id="username" name="username" required />
-
-      <button type="submit">Submit</button>
-    </form>
+    <StyledForm onSubmit={handleSubmit}>
+      <label htmlFor="username">Namn : </label>
+      <input type="text" id="username" name="username" required />    
+      <label htmlFor="username">Mailadress : </label>
+      <input type="text" id="email" name="email" required />    
+      <StyledButton type="submit" onClick={() => router.push('/register')}>Anmäl</StyledButton>
+    </StyledForm>
   );
 }
