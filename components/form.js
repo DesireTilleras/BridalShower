@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import StyledForm from '../components/styled/styledForm'
-import StyledButton from './styled/styledButton';
+import StyledForm from './styled/StyledForm'
+import StyledButton from './styled/StyledButton';
 
 export default function PageWithJSbasedForm() {
   const router = useRouter()
