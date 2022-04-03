@@ -1,7 +1,7 @@
 import  {useState}  from "react";
 import React from 'react';
 import Arrow from "../public/chevron_icon.svg"
-import Button from '../components/button.js'
+import Button from './Button.js'
 
 import {
   StyledSelectList,

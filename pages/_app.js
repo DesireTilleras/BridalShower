@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [deviceType, setDeviceType] = useState("desktop");
+
   useEffect(() => {
     setDeviceType(getDeviceType());
   }, []);

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Form from "../components/form.js";
-import StyledButton from '../components/styled/styledButton'
+import Form from "../components/Form.js";
+import StyledButton from '../components/styled/StyledButton'
 
 function register({ names }) {
   console.log(names.Names);

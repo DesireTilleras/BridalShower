@@ -1,14 +1,14 @@
 import Link from "next/link";
-import StyledButton from '../components/styled/styledButton'
+import StyledButton from './styled/StyledButton'
 
 
-const button = (props) => {
+const Button = (props) => {
   return (
     <div className="buttonDiv">
       <Link href={props.path} passHref={true}>
-        <StyledButton>{props.text}</StyledButton>
+        <StyledButton onClick={props.onClick}>{props.text}</StyledButton>
       </Link>
     </div>
   );
 };
-export default button;
+export default Button;
