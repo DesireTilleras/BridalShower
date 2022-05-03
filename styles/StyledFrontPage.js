@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 export const StyledFrontPage = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: inherit;
 
 
 .main-content{
@@ -11,7 +15,7 @@ flex-direction: row;
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 200px;
+
 }
 
 `;

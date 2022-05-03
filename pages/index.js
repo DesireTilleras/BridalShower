@@ -1,24 +1,26 @@
 import { StyledFrontPage } from "../styles/StyledFrontPage";
-import PicOfMadde from "../components/Image";
+import { Pic } from "../components/Image";
 import { SideMenuContext } from "../components/common/sideMenuContext";
 import SideBar from "../components/SideBar";
 import { useState } from "react";
 import { Panel } from "../components/panel";
+import maddePic from "../public/images/madde.jpg";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <SideMenuContext.Provider value={[isVisible, setIsVisible]}>
-      <div style={{ display: "flex", flexDirection: "column"}}>
+      <div className="wrapper-container">
         <Panel />
-        <StyledFrontPage>
+        <div className="wrapper">
           <div>
             <SideBar />
           </div>
+        <StyledFrontPage>
           <div className="main-content">
             <div>
-              <PicOfMadde />
+              <Pic pic={maddePic} alt="Pic of Madde" />
             </div>
             <div>
               <h1>Välkommen till Maddes Möhippe-sida!</h1>
@@ -31,6 +33,7 @@ export default function Home() {
             </div>
           </div>
         </StyledFrontPage>
+        </div>
       </div>
     </SideMenuContext.Provider>
   );
